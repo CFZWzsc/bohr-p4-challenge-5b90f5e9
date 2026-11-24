@@ -73,6 +73,18 @@ description: Use when a systematic or scoping review task supplies records plus 
 - 未提供双评审数据时，一致性与偏倚不可评估。
 - 流程计数只覆盖本 case 提供的记录，不代表完整检索产出的全部条目。
 
+## Quickstart
+
+在仓库根目录 `bohrium-competition` 执行（PowerShell，实测通过）：
+
+```powershell
+python -B "tracks\literature-search\challenges\challenge-5b90f5e9\06_code\submission\scripts\run_skill.py" --case "tracks\literature-search\challenges\challenge-5b90f5e9\06_code\submission\examples\demo-case\case.json" --out "$env:TEMP\demo_5b90f5e9\result.json" --work "$env:TEMP\demo_5b90f5e9\work"
+```
+
+- 示例输入：`examples/demo-case/case.json`，合成且自包含（`"demo": true`，所有 DOI 均为虚构的 `10.0000/...`，不指向真实论文）。
+- 实测输出：`status = "success"`、`included = 2`，`result.json` 顶层含 `case_id`、`status`、`result`、`screening_results`、`included`、`evidence`、`stats`；同一输入两次运行结果逐字节一致。
+- 该用例只验证脚本可执行与输出契约齐全，不代表真实纳排结论。
+
 ## 最小调用示例（示例，非正式案例结果）
 
 ```bash
