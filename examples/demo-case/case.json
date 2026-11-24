@@ -1,0 +1,118 @@
+{
+  "demo": true,
+  "synthetic": true,
+  "case_id": "demo-5b90f5e9-nlrp3-saki",
+  "note": "Synthetic, self-contained demo case. Titles, DOIs (10.0000/...) and abstracts are fabricated for testing only.",
+  "question": "Which primary studies show that NLRP3 inflammasome activation or gasdermin D-mediated pyroptosis contributes to sepsis-associated acute kidney injury?",
+  "search_protocol": {
+    "sources": ["PubMed", "Europe PMC"],
+    "languages": ["en"],
+    "date_from": 2015,
+    "date_to": 2024
+  },
+  "criteria": [
+    {
+      "id": "I1",
+      "type": "inclusion",
+      "description": "Primary study measuring NLRP3 inflammasome activation in sepsis or septic acute kidney injury",
+      "terms": ["nlrp3", "inflammasome"]
+    },
+    {
+      "id": "I2",
+      "type": "inclusion",
+      "description": "Primary study of gasdermin D or pyroptosis in sepsis-associated kidney injury",
+      "terms": ["gasdermin", "pyroptosis"]
+    },
+    {
+      "id": "E1",
+      "type": "exclusion",
+      "description": "Editorials and commentary without primary data",
+      "terms": ["editorial"]
+    }
+  ],
+  "records": [
+    {
+      "source_id": "s1",
+      "title": "NLRP3 inflammasome activation in septic acute kidney injury",
+      "abstract": "We studied NLRP3 inflammasome activation in renal tubular cells from 42 patients with septic acute kidney injury. Caspase-1 cleavage and IL-1beta release were measured and correlated with renal recovery.",
+      "doi": "10.0000/demo.s1",
+      "year": 2019,
+      "journal": "Kidney International",
+      "source": "pubmed"
+    },
+    {
+      "source_id": "s2",
+      "title": "Gasdermin D cleavage mediates pyroptosis in sepsis",
+      "abstract": "In a mouse model of caecal ligation and puncture, gasdermin D cleavage caused pyroptotic death of tubular epithelial cells. GSDMD inhibition reduced kidney injury scores.",
+      "doi": "10.0000/demo.s2",
+      "year": 2021,
+      "journal": "Journal of the American Society of Nephrology",
+      "source": "europepmc"
+    },
+    {
+      "source_id": "s3",
+      "title": "NLRP3 inflammasome activation in septic acute kidney injury.",
+      "abstract": "We studied NLRP3 inflammasome activation in renal tubular cells from 42 patients with septic acute kidney injury. Caspase-1 cleavage and IL-1beta release were measured and correlated with renal recovery.",
+      "doi": "10.0000/demo.s1",
+      "year": 2019,
+      "journal": "Kidney International",
+      "source": "europepmc"
+    },
+    {
+      "source_id": "s4",
+      "title": "Editorial: inflammation in critical illness",
+      "abstract": "This editorial comments on recent inflammation research in critical care and calls for larger cohorts.",
+      "doi": "10.0000/demo.s4",
+      "year": 2018,
+      "journal": "Critical Care",
+      "source": "pubmed"
+    }
+  ],
+  "reviewer_decisions": [
+    {
+      "reviewer": "reviewer-a",
+      "record_key": "doi:10.0000/demo.s1",
+      "decision": "include",
+      "note": "Meets I1"
+    },
+    {
+      "reviewer": "reviewer-a",
+      "record_key": "doi:10.0000/demo.s2",
+      "decision": "include",
+      "note": "Meets I2"
+    },
+    {
+      "reviewer": "reviewer-a",
+      "record_key": "doi:10.0000/demo.s4",
+      "decision": "exclude",
+      "note": "Editorial, E1"
+    },
+    {
+      "reviewer": "reviewer-b",
+      "record_key": "doi:10.0000/demo.s1",
+      "decision": "include",
+      "note": "Meets I1"
+    },
+    {
+      "reviewer": "reviewer-b",
+      "record_key": "doi:10.0000/demo.s2",
+      "decision": "review",
+      "note": "Model organism only, needs full text"
+    },
+    {
+      "reviewer": "reviewer-b",
+      "record_key": "doi:10.0000/demo.s4",
+      "decision": "exclude",
+      "note": "Editorial, E1"
+    }
+  ],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "result": "object",
+    "screening_results": "array",
+    "included": "array",
+    "evidence": "array",
+    "stats": "object"
+  }
+}
