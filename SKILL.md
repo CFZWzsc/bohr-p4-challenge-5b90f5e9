@@ -5,6 +5,8 @@ description: Use when a systematic or scoping review task supplies records plus 
 
 # 系统性文献检索与纳排筛选
 
+
+
 ## 用途与适用条件
 
 当任务要求把研究问题转成可执行筛选流程，并对候选记录逐条给出"纳入/排除/待复核"判断、理由码、证据片段与可复核的流程计数时使用。适用于系统综述、范围综述与指南证据更新的题录筛选阶段。
